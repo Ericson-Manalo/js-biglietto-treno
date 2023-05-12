@@ -11,5 +11,28 @@ const kmToDo = parseInt(prompt('Inserisci quanti km devi percorrere'));
 
 const userAge = parseInt(prompt('Inserisci la tua età'));
 
-let fullPrice = kmToDo * 0.21;
-console.log(fullPrice);
+const priceForKm = 0.21;
+
+let fullPrice = kmToDo * priceForKm;
+
+let discountMinorAge = (20 / 100) * fullPrice;
+
+let finalDiscMinAge = fullPrice - discountMinorAge;
+console.log("importo scontato del 20% " + finalDiscMinAge);
+
+let discountSeniorAge = (40 / 100) * fullPrice;
+let finalDiscSeniorAge = fullPrice - discountSeniorAge;
+console.log("importo al netto dello sconto " + finalDiscSeniorAge);
+
+let result;
+
+if (userAge < 18){
+    result = finalDiscMinAge;
+}else if (userAge > 65){
+    result = finalDiscSeniorAge;
+}
+else{
+    result = fullPrice;
+}
+
+document.getElementById("output").innerHTML += result;
