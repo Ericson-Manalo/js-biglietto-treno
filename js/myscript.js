@@ -9,7 +9,11 @@
 
 const kmToDo = parseInt(prompt('Inserisci quanti km devi percorrere'));
 
+document.getElementById("km").innerHTML += kmToDo;
+
 const userAge = parseInt(prompt('Inserisci la tua età'));
+
+document.getElementById("user-age").innerHTML += userAge;
 
 const priceForKm = 0.21;
 
@@ -27,12 +31,12 @@ console.log("importo finale con eventuale sconto del 40% per età dopo i 66 anni
 let result;
 
 if (userAge < 18){
-    result = finalDiscMinAge;
+    result = (finalDiscMinAge.toFixed( 2 ));
 }else if (userAge > 65){
-    result = finalDiscSeniorAge;
+    result = (finalDiscSeniorAge.toFixed( 2 ));
 }
 else{
-    result = fullPrice;
+    result = (fullPrice.toFixed( 2 ));
 }
 
 document.getElementById("output").innerHTML += result;
