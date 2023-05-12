@@ -15,14 +15,14 @@ const priceForKm = 0.21;
 
 let fullPrice = kmToDo * priceForKm;
 
-let discountMinorAge = (20 / 100) * fullPrice;
 
+let discountMinorAge = (20 / 100) * fullPrice;
 let finalDiscMinAge = fullPrice - discountMinorAge;
-console.log("importo scontato del 20% " + finalDiscMinAge);
+console.log("importo finale con eventuale sconto del 20% per età compresa tra 1 e 17 anni " + finalDiscMinAge.toFixed( 2 ));
 
 let discountSeniorAge = (40 / 100) * fullPrice;
 let finalDiscSeniorAge = fullPrice - discountSeniorAge;
-console.log("importo al netto dello sconto " + finalDiscSeniorAge);
+console.log("importo finale con eventuale sconto del 40% per età dopo i 66 anni " + finalDiscSeniorAge.toFixed( 2 ));
 
 let result;
 
