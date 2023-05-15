@@ -31,12 +31,11 @@ console.log("importo finale con eventuale sconto del 40% per età dopo i 66 anni
 let result;
 
 if (userAge < 18){
-    result = (finalDiscMinAge.toFixed( 2 ));
+    result = (finalDiscMinAge.toFixed( 2 )+'€');
 }else if (userAge > 65){
-    result = (finalDiscSeniorAge.toFixed( 2 ));
-}
-else{
-    result = (fullPrice.toFixed( 2 ));
+    result = (finalDiscSeniorAge.toFixed( 2 )+'€');
+}else{
+    result = (fullPrice.toFixed( 2 )+'€');
 }
 
 document.getElementById("output").innerHTML += result;
